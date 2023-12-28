@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Reference Include="Leadtools.dll">
+      <HintPath>$(MSBuildThisFileDirectory)..\..\lib\netstandard2.0\Leadtools.dll</HintPath>
+    </Reference>
+    <Reference Include="Leadtools.Drawing.dll">
+      <HintPath>$(MSBuildThisFileDirectory)..\..\lib\netstandard2.0\Leadtools.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="Leadtools.Svg.dll">
+      <HintPath>$(MSBuildThisFileDirectory)..\..\lib\netstandard2.0\Leadtools.Svg.dll</HintPath>
+    </Reference>
+    <Reference Include="Leadtools.Codecs.dll">
+      <HintPath>$(MSBuildThisFileDirectory)..\..\lib\netstandard2.0\Leadtools.Codecs.dll</HintPath>
+    </Reference>
+    <AndroidNativeLibrary Include="$(MSBuildThisFileDirectory)..\..\lib\MonoAndroid\arm64-v8a\libleadtools.so">
+      <Abi>arm64-v8a</Abi>
+      <link>libs\arm64-v8a\libleadtools.so</link>
+      <buildAction>Content</buildAction>
+      <copyToOutput>true</copyToOutput>
+    </AndroidNativeLibrary>
+    <AndroidNativeLibrary Include="$(MSBuildThisFileDirectory)..\..\lib\MonoAndroid\armeabi-v7a\libleadtools.so">
+      <Abi>armeabi-v7a</Abi>
+      <link>libs\armeabi-v7a\libleadtools.so</link>
+      <buildAction>Content</buildAction>
+      <copyToOutput>true</copyToOutput>
+    </AndroidNativeLibrary>
+    <AndroidNativeLibrary Include="$(MSBuildThisFileDirectory)..\..\lib\MonoAndroid\x86_64\libleadtools.so">
+      <Abi>x86_64</Abi>
+      <link>libs\x86_64\libleadtools.so</link>
+      <buildAction>Content</buildAction>
+      <copyToOutput>true</copyToOutput>
+    </AndroidNativeLibrary>
+    <AndroidNativeLibrary Include="$(MSBuildThisFileDirectory)..\..\lib\MonoAndroid\x86\libleadtools.so">
+      <Abi>x86</Abi>
+      <link>libs\x86\libleadtools.so</link>
+      <buildAction>Content</buildAction>
+      <copyToOutput>true</copyToOutput>
+    </AndroidNativeLibrary>
+    <AndroidNativeLibrary Include="$(MSBuildThisFileDirectory)..\..\lib\MonoAndroid\arm64-v8a\libleadtools.drawing.so">
+      <Abi>arm64-v8a</Abi>
+      <link>libs\arm64-v8a\libleadtools.drawing.so</link>
+      <buildAction>Content</buildAction>
+      <copyToOutput>true</copyToOutput>
+    </AndroidNativeLibrary>
+    <AndroidNativeLibrary Include="$(MSBuildThisFileDirectory)..\..\lib\MonoAndroid\armeabi-v7a\libleadtools.drawing.so">
+      <Abi>armeabi-v7a</Abi>
+      <link>libs\armeabi-v7a\libleadtools.drawing.so</link>
+      <buildAction>Content</buildAction>
+      <copyToOutput>true</copyToOutput>
+    </AndroidNativeLibrary>
+    <AndroidNativeLibrary Include="$(MSBuildThisFileDirectory)..\..\lib\MonoAndroid\x86_64\libleadtools.drawing.so">
+      <Abi>x86_64</Abi>
+      <link>libs\x86_64\libleadtools.drawing.so</link>
+      <buildAction>Content</buildAction>
+      <copyToOutput>true</copyToOutput>
+    </AndroidNativeLibrary>
+    <AndroidNativeLibrary Include="$(MSBuildThisFileDirectory)..\..\lib\MonoAndroid\x86\libleadtools.drawing.so">
+      <Abi>x86</Abi>
+      <link>libs\x86\libleadtools.drawing.so</link>
+      <buildAction>Content</buildAction>
+      <copyToOutput>true</copyToOutput>
+    </AndroidNativeLibrary>
+    <AndroidNativeLibrary Include="$(MSBuildThisFileDirectory)..\..\lib\MonoAndroid\arm64-v8a\libleadtools.svg.so">
+      <Abi>arm64-v8a</Abi>
+      <link>libs\arm64-v8a\libleadtools.svg.so</link>
+      <buildAction>Content</buildAction>
+      <copyToOutput>true</copyToOutput>
+    </AndroidNativeLibrary>
+    <AndroidNativeLibrary Include="$(MSBuildThisFileDirectory)..\..\lib\MonoAndroid\armeabi-v7a\libleadtools.svg.so">
+      <Abi>armeabi-v7a</Abi>
+      <link>libs\armeabi-v7a\libleadtools.svg.so</link>
+      <buildAction>Content</buildAction>
+      <copyToOutput>true</copyToOutput>
+    </AndroidNativeLibrary>
+    <AndroidNativeLibrary Include="$(MSBuildThisFileDirectory)..\..\lib\MonoAndroid\x86_64\libleadtools.svg.so">
+      <Abi>x86_64</Abi>
+      <link>libs\x86_64\libleadtools.svg.so</link>
+      <buildAction>Content</buildAction>
+      <copyToOutput>true</copyToOutput>
+    </AndroidNativeLibrary>
+    <AndroidNativeLibrary Include="$(MSBuildThisFileDirectory)..\..\lib\MonoAndroid\x86\libleadtools.svg.so">
+      <Abi>x86</Abi>
+      <link>libs\x86\libleadtools.svg.so</link>
+      <buildAction>Content</buildAction>
+      <copyToOutput>true</copyToOutput>
+    </AndroidNativeLibrary>
+    <AndroidNativeLibrary Include="$(MSBuildThisFileDirectory)..\..\lib\MonoAndroid\arm64-v8a\libleadtools.document.core.so">
+      <Abi>arm64-v8a</Abi>
+      <link>libs\arm64-v8a\libleadtools.document.core.so</link>
+      <buildAction>Content</buildAction>
+      <copyToOutput>true</copyToOutput>
+    </AndroidNativeLibrary>
+    <AndroidNativeLibrary Include="$(MSBuildThisFileDirectory)..\..\lib\MonoAndroid\armeabi-v7a\libleadtools.document.core.so">
+      <Abi>armeabi-v7a</Abi>
+      <link>libs\armeabi-v7a\libleadtools.document.core.so</link>
+      <buildAction>Content</buildAction>
+      <copyToOutput>true</copyToOutput>
+    </AndroidNativeLibrary>
+    <AndroidNativeLibrary Include="$(MSBuildThisFileDirectory)..\..\lib\MonoAndroid\x86_64\libleadtools.document.core.so">
+      <Abi>x86_64</Abi>
+      <link>libs\x86_64\libleadtools.document.core.so</link>
+      <buildAction>Content</buildAction>
+      <copyToOutput>true</copyToOutput>
+    </AndroidNativeLibrary>
+    <AndroidNativeLibrary Include="$(MSBuildThisFileDirectory)..\..\lib\MonoAndroid\x86\libleadtools.document.core.so">
+      <Abi>x86</Abi>
+      <link>libs\x86\libleadtools.document.core.so</link>
+      <buildAction>Content</buildAction>
+      <copyToOutput>true</copyToOutput>
+    </AndroidNativeLibrary>
+    <AndroidNativeLibrary Include="$(MSBuildThisFileDirectory)..\..\lib\MonoAndroid\arm64-v8a\libleadtools.codecs.so">
+      <Abi>arm64-v8a</Abi>
+      <link>libs\arm64-v8a\libleadtools.codecs.so</link>
+      <buildAction>Content</buildAction>
+      <copyToOutput>true</copyToOutput>
+    </AndroidNativeLibrary>
+    <AndroidNativeLibrary Include="$(MSBuildThisFileDirectory)..\..\lib\MonoAndroid\armeabi-v7a\libleadtools.codecs.so">
+      <Abi>armeabi-v7a</Abi>
+      <link>libs\armeabi-v7a\libleadtools.codecs.so</link>
+      <buildAction>Content</buildAction>
+      <copyToOutput>true</copyToOutput>
+    </AndroidNativeLibrary>
+    <AndroidNativeLibrary Include="$(MSBuildThisFileDirectory)..\..\lib\MonoAndroid\x86_64\libleadtools.codecs.so">
+      <Abi>x86_64</Abi>
+      <link>libs\x86_64\libleadtools.codecs.so</link>
+      <buildAction>Content</buildAction>
+      <copyToOutput>true</copyToOutput>
+    </AndroidNativeLibrary>
+    <AndroidNativeLibrary Include="$(MSBuildThisFileDirectory)..\..\lib\MonoAndroid\x86\libleadtools.codecs.so">
+      <Abi>x86</Abi>
+      <link>libs\x86\libleadtools.codecs.so</link>
+      <buildAction>Content</buildAction>
+      <copyToOutput>true</copyToOutput>
+    </AndroidNativeLibrary>
+  </ItemGroup>
+</Project>

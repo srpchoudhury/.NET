@@ -1,0 +1,244 @@
+<?xml version="1.0"?>
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+
+  <!-- remove existing entry -->
+  <connectionStrings>
+    <clear/>
+      <add name="OraAspNetConString" connectionString=" " xdt:Transform="Remove" xdt:Locator="Match(name)"/>
+  </connectionStrings>
+
+  <!-- remove if section is empty -->
+  <connectionStrings>
+        <clear xdt:Transform="RemoveAll" xdt:Locator="Condition(count(*)=0)" />
+  </connectionStrings>
+
+  <connectionStrings xdt:Transform="RemoveAll" xdt:Locator="Condition(count(*)=0)" />
+
+  <!-- remove existing entry -->  
+  <system.web>
+    <membership defaultProvider="OracleMembershipProvider">
+      <providers>
+        <clear/>
+          <add name="OracleMembershipProvider" type="Oracle.Web.Security.OracleMembershipProvider, Oracle.Web, Version=4.122.21.1, Culture=neutral, PublicKeyToken=89b483f429c47342" connectionStringName="OraAspNetConString" applicationName="" enablePasswordRetrieval="false" enablePasswordReset="true" requiresQuestionAndAnswer="true" requiresUniqueEmail="false" passwordFormat="Hashed" maxInvalidPasswordAttempts="5" minRequiredPasswordLength="7" minRequiredNonalphanumericCharacters="1" passwordAttemptWindow="10" passwordStrengthRegularExpression="" xdt:Transform="Remove" xdt:Locator="Match(name)" />
+      </providers>
+    </membership>
+  </system.web>
+
+  <!-- remove if section is empty -->
+  <system.web>
+    <membership defaultProvider="OracleMembershipProvider">
+      <providers>
+        <clear xdt:Transform="RemoveAll" xdt:Locator="Condition(count(*)=0)" />
+      </providers>
+    </membership>
+  </system.web>
+
+  <system.web>
+    <membership defaultProvider="OracleMembershipProvider">
+      <providers xdt:Transform="RemoveAll" xdt:Locator="Condition(count(*)=0)" />
+    </membership>
+  </system.web>
+
+  <system.web>
+    <membership defaultProvider="OracleMembershipProvider" xdt:Transform="RemoveAll" xdt:Locator="Condition(count(*)=0)" />
+  </system.web>
+
+  <system.web xdt:Transform="RemoveAll" xdt:Locator="Condition(count(*)=0)" />
+
+
+  <!-- remove existing entry -->  
+  <system.web>
+    <profile enabled="true" defaultProvider="OracleProfileProvider">
+      <providers>
+        <clear/>
+          <add name="OracleProfileProvider" type="Oracle.Web.Profile.OracleProfileProvider, Oracle.Web, Version=4.122.21.1, Culture=neutral, PublicKeyToken=89b483f429c47342" connectionStringName="OraAspNetConString" applicationName="" xdt:Transform="Remove" xdt:Locator="Match(name)" />
+      </providers>
+    </profile>
+  </system.web>
+
+  <!-- remove if section is empty -->
+  <system.web>
+    <profile enabled="true" defaultProvider="OracleProfileProvider">
+      <providers>
+        <clear xdt:Transform="RemoveAll" xdt:Locator="Condition(count(*)=0)" />
+      </providers>
+    </profile>
+  </system.web>
+
+  <system.web>
+    <profile enabled="true" defaultProvider="OracleProfileProvider">
+      <providers xdt:Transform="RemoveAll" xdt:Locator="Condition(count(*)=0)" />
+    </profile>
+  </system.web>
+
+  <system.web>
+    <profile enabled="true" defaultProvider="OracleProfileProvider" xdt:Transform="RemoveAll" xdt:Locator="Condition(count(*)=0)" />
+  </system.web>
+
+  <system.web xdt:Transform="RemoveAll" xdt:Locator="Condition(count(*)=0)" />
+
+
+  <!-- remove existing entry -->  
+  <system.web>
+    <roleManager enabled="true" defaultProvider="OracleRoleProvider">
+      <providers>
+        <clear/>
+          <add name="OracleRoleProvider" type="Oracle.Web.Security.OracleRoleProvider, Oracle.Web, Version=4.122.21.1, Culture=neutral, PublicKeyToken=89b483f429c47342" connectionStringName="OraAspNetConString" applicationName="" xdt:Transform="Remove" xdt:Locator="Match(name)" />
+      </providers>
+    </roleManager>
+  </system.web>
+
+  <!-- remove if section is empty -->
+  <system.web>
+    <roleManager enabled="true" defaultProvider="OracleRoleProvider">
+      <providers>
+        <clear xdt:Transform="RemoveAll" xdt:Locator="Condition(count(*)=0)" />
+      </providers>
+    </roleManager>
+  </system.web>
+
+  <system.web>
+    <roleManager enabled="true" defaultProvider="OracleRoleProvider">
+      <providers xdt:Transform="RemoveAll" xdt:Locator="Condition(count(*)=0)" />
+    </roleManager>
+  </system.web>
+
+  <system.web>
+    <roleManager enabled="true" defaultProvider="OracleRoleProvider" xdt:Transform="RemoveAll" xdt:Locator="Condition(count(*)=0)" />
+  </system.web>
+
+  <system.web xdt:Transform="RemoveAll" xdt:Locator="Condition(count(*)=0)" />
+
+
+  <!-- remove existing entry -->  
+  <system.web>
+    <siteMap enabled="true" defaultProvider="OracleSiteMapProvider">
+      <providers>
+        <clear/>
+          <add name="OracleSiteMapProvider" type="Oracle.Web.SiteMap.OracleSiteMapProvider, Oracle.Web, Version=4.122.21.1, Culture=neutral, PublicKeyToken=89b483f429c47342" connectionStringName="OraAspNetConString" applicationName="" securityTrimmingEnabled="true" xdt:Transform="Remove" xdt:Locator="Match(name)" />
+      </providers>
+    </siteMap>
+  </system.web>
+
+  <!-- remove if section is empty -->
+  <system.web>
+    <siteMap enabled="true" defaultProvider="OracleSiteMapProvider">
+      <providers>
+        <clear xdt:Transform="RemoveAll" xdt:Locator="Condition(count(*)=0)" />
+      </providers>
+    </siteMap>
+  </system.web>
+
+  <system.web>
+    <siteMap enabled="true" defaultProvider="OracleSiteMapProvider">
+      <providers xdt:Transform="RemoveAll" xdt:Locator="Condition(count(*)=0)" />
+    </siteMap>
+  </system.web>
+
+  <system.web>
+    <siteMap enabled="true" defaultProvider="OracleSiteMapProvider" xdt:Transform="RemoveAll" xdt:Locator="Condition(count(*)=0)" />
+  </system.web>
+
+  <system.web xdt:Transform="RemoveAll" xdt:Locator="Condition(count(*)=0)" />
+
+
+  <!-- remove existing entry -->  
+  <system.web>
+    <webParts>
+      <personalization defaultProvider="OraclePersonalizationProvider">
+        <providers>
+          <clear/>
+            <add name="OraclePersonalizationProvider" type="Oracle.Web.Personalization.OraclePersonalizationProvider, Oracle.Web, Version=4.122.21.1, Culture=neutral, PublicKeyToken=89b483f429c47342" connectionStringName="OraAspNetConString" applicationName="" xdt:Transform="Remove" xdt:Locator="Match(name)" />
+        </providers>
+      </personalization>
+    </webParts>
+  </system.web>
+
+
+  <!-- remove if section is empty -->
+  <system.web>
+    <webParts>
+      <personalization defaultProvider="OraclePersonalizationProvider">
+        <providers>
+          <clear xdt:Transform="RemoveAll" xdt:Locator="Condition(count(*)=0)" />
+        </providers>
+      </personalization>
+    </webParts>
+  </system.web>
+
+  <system.web>
+    <webParts>
+      <personalization defaultProvider="OraclePersonalizationProvider">
+        <providers xdt:Transform="RemoveAll" xdt:Locator="Condition(count(*)=0)" />
+      </personalization>
+    </webParts>
+  </system.web>
+
+  <system.web>
+    <webParts>
+     <personalization defaultProvider="OraclePersonalizationProvider" xdt:Transform="RemoveAll" xdt:Locator="Condition(count(*)=0)" />
+    </webParts>
+  </system.web>
+
+  <system.web>
+    <webParts xdt:Transform="RemoveAll" xdt:Locator="Condition(count(*)=0)" />
+  </system.web>
+
+  <system.web xdt:Transform="RemoveAll" xdt:Locator="Condition(count(*)=0)" />
+
+
+  <!-- remove existing entry -->  
+  <system.web>
+    <healthMonitoring enabled="true">
+      <providers>
+          <add name="OracleWebEventProvider" type="Oracle.Web.Management.OracleWebEventProvider, Oracle.Web, Version=4.122.21.1, Culture=neutral, PublicKeyToken=89b483f429c47342" connectionStringName="OraAspNetConString" buffer="true" bufferMode="OracleNotification" xdt:Transform="Remove" xdt:Locator="Match(name)" />
+      </providers>
+    </healthMonitoring>
+  </system.web>
+
+  <!-- remove if section is empty -->
+  <system.web>
+    <healthMonitoring enabled="true">
+      <providers xdt:Transform="RemoveAll" xdt:Locator="Condition(count(*)=0)" />
+    </healthMonitoring>
+  </system.web>
+
+  <system.web>
+    <healthMonitoring enabled="true" xdt:Transform="RemoveAll" xdt:Locator="Condition(count(*)=0)" />
+  </system.web>
+
+  <system.web xdt:Transform="RemoveAll" xdt:Locator="Condition(count(*)=0)" />
+
+
+  <!-- remove existing entry -->  
+  <system.web>
+    <sessionState mode="Custom" customProvider="OracleSessionStateStore">
+      <providers>
+        <clear/>
+          <add name="OracleSessionStateStore" type="Oracle.Web.SessionState.OracleSessionStateStore, Oracle.Web, Version=4.122.21.1, Culture=neutral,PublicKeyToken=89b483f429c47342" connectionStringName="OraAspNetConString" xdt:Transform="Remove" xdt:Locator="Match(name)" />
+      </providers>
+    </sessionState>
+  </system.web>
+
+  <!-- remove if section is empty -->
+  <system.web>
+    <sessionState mode="Custom" customProvider="OracleSessionStateStore">
+      <providers>
+        <clear xdt:Transform="RemoveAll" xdt:Locator="Condition(count(*)=0)" />
+      </providers>
+    </sessionState>
+  </system.web>
+
+  <system.web>
+    <sessionState mode="Custom" customProvider="OracleSessionStateStore">
+      <providers xdt:Transform="RemoveAll" xdt:Locator="Condition(count(*)=0)" />
+    </sessionState>
+  </system.web>
+
+  <system.web>
+    <sessionState mode="Custom" customProvider="OracleSessionStateStore" xdt:Transform="RemoveAll" xdt:Locator="Condition(count(*)=0)" />
+  </system.web>
+
+  <system.web xdt:Transform="RemoveAll" xdt:Locator="Condition(count(*)=0)" />
+
+</configuration>

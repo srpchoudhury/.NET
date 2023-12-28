@@ -1,0 +1,7 @@
+C:\Users\SUYOG\Desktop\Pratice Oracle\speechsynthesizer\speechsynthesizer\obj\Debug\speechsynthesizer.csproj.AssemblyReference.cache
+C:\Users\SUYOG\Desktop\Pratice Oracle\speechsynthesizer\speechsynthesizer\obj\Debug\speechsynthesizer.csproj.CoreCompileInputs.cache
+C:\Users\SUYOG\Desktop\Pratice Oracle\speechsynthesizer\speechsynthesizer\bin\Debug\speechsynthesizer.exe.config
+C:\Users\SUYOG\Desktop\Pratice Oracle\speechsynthesizer\speechsynthesizer\bin\Debug\speechsynthesizer.exe
+C:\Users\SUYOG\Desktop\Pratice Oracle\speechsynthesizer\speechsynthesizer\bin\Debug\speechsynthesizer.pdb
+C:\Users\SUYOG\Desktop\Pratice Oracle\speechsynthesizer\speechsynthesizer\obj\Debug\speechsynthesizer.exe
+C:\Users\SUYOG\Desktop\Pratice Oracle\speechsynthesizer\speechsynthesizer\obj\Debug\speechsynthesizer.pdb

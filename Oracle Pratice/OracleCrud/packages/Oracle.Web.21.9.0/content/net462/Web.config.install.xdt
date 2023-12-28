@@ -1,0 +1,334 @@
+<?xml version="1.0"?>
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+
+  <!-- If connectionStrings tag is absent -->
+  <connectionStrings xdt:Transform="InsertIfMissing">
+  </connectionStrings>
+
+  <!-- If connectionStrings tag is present but if clear tag is absent -->
+  <connectionStrings>
+    <clear xdt:Transform="InsertIfMissing"/>
+  </connectionStrings>
+
+  <!-- add entry if missing -->
+  <connectionStrings>
+    <clear/>
+      <add name="OraAspNetConString" connectionString=" " xdt:Transform="InsertIfMissing" xdt:Locator="Match(name)"/>
+  </connectionStrings>
+
+
+  <!-- If system.web tag is absent -->
+  <system.web xdt:Transform="InsertIfMissing">
+  </system.web>
+
+  <!-- If system.web tag is present but if membership tag is absent -->
+  <system.web>
+    <membership defaultProvider="OracleMembershipProvider" xdt:Transform="InsertIfMissing">
+    </membership>
+  </system.web>
+
+  <!-- If membership tag is present but if providers tag is absent -->
+  <system.web>
+    <membership defaultProvider="OracleMembershipProvider">
+      <providers xdt:Transform="InsertIfMissing">
+      </providers>
+    </membership>
+  </system.web>
+
+  <!-- If providers tag is present but if clear tag is absent -->
+  <system.web>
+    <membership defaultProvider="OracleMembershipProvider">
+      <providers>
+        <clear xdt:Transform="InsertIfMissing"/>
+      </providers>
+    </membership>
+  </system.web>
+
+  <!-- remove existing entry -->  
+  <system.web>
+    <membership defaultProvider="OracleMembershipProvider">
+      <providers>
+        <clear/>
+          <add name="OracleMembershipProvider" type="Oracle.Web.Security.OracleMembershipProvider, Oracle.Web, Version=4.122.21.1, Culture=neutral, PublicKeyToken=89b483f429c47342" connectionStringName="OraAspNetConString" applicationName="" enablePasswordRetrieval="false" enablePasswordReset="true" requiresQuestionAndAnswer="true" requiresUniqueEmail="false" passwordFormat="Hashed" maxInvalidPasswordAttempts="5" minRequiredPasswordLength="7" minRequiredNonalphanumericCharacters="1" passwordAttemptWindow="10" passwordStrengthRegularExpression="" xdt:Transform="Remove" xdt:Locator="Match(name)" />
+      </providers>
+    </membership>
+  </system.web>
+
+  <!-- insert new entry -->
+  <system.web>
+    <membership defaultProvider="OracleMembershipProvider">
+      <providers>
+        <clear/>
+          <add name="OracleMembershipProvider" type="Oracle.Web.Security.OracleMembershipProvider, Oracle.Web, Version=4.122.21.1, Culture=neutral, PublicKeyToken=89b483f429c47342" connectionStringName="OraAspNetConString" applicationName="" enablePasswordRetrieval="false" enablePasswordReset="true" requiresQuestionAndAnswer="true" requiresUniqueEmail="false" passwordFormat="Hashed" maxInvalidPasswordAttempts="5" minRequiredPasswordLength="7" minRequiredNonalphanumericCharacters="1" passwordAttemptWindow="10" passwordStrengthRegularExpression="" xdt:Transform="Insert" />
+      </providers>
+    </membership>
+  </system.web> 
+
+
+
+  <!-- If system.web tag is present but if profile tag is absent -->
+  <system.web>
+    <profile enabled="true" defaultProvider="OracleProfileProvider" xdt:Transform="InsertIfMissing">
+    </profile>
+  </system.web>
+
+  <!-- If profile tag is present but if providers tag is absent -->
+  <system.web>
+    <profile enabled="true" defaultProvider="OracleProfileProvider">
+      <providers xdt:Transform="InsertIfMissing">
+      </providers>
+    </profile>
+  </system.web>
+
+  <!-- If providers tag is present but if clear tag is absent -->
+  <system.web>
+    <profile enabled="true" defaultProvider="OracleProfileProvider">
+      <providers>
+        <clear xdt:Transform="InsertIfMissing"/>
+      </providers>
+    </profile>
+  </system.web>
+
+  <!-- remove existing entry -->  
+  <system.web>
+    <profile enabled="true" defaultProvider="OracleProfileProvider">
+      <providers>
+        <clear/>
+          <add name="OracleProfileProvider" type="Oracle.Web.Profile.OracleProfileProvider, Oracle.Web, Version=4.122.21.1, Culture=neutral, PublicKeyToken=89b483f429c47342" connectionStringName="OraAspNetConString" applicationName="" xdt:Transform="Remove" xdt:Locator="Match(name)" />
+      </providers>
+    </profile>
+  </system.web>
+
+  <!-- insert new entry -->
+  <system.web>
+    <profile enabled="true" defaultProvider="OracleProfileProvider">
+      <providers>
+        <clear/>
+          <add name="OracleProfileProvider" type="Oracle.Web.Profile.OracleProfileProvider, Oracle.Web, Version=4.122.21.1, Culture=neutral, PublicKeyToken=89b483f429c47342" connectionStringName="OraAspNetConString" applicationName="" xdt:Transform="Insert" />
+      </providers>
+    </profile>
+  </system.web> 
+
+  <!-- If system.web tag is present but if roleManager tag is absent -->
+  <system.web>
+    <roleManager enabled="true" defaultProvider="OracleRoleProvider" xdt:Transform="InsertIfMissing">
+    </roleManager>
+  </system.web>
+
+  <!-- If roleManager tag is present but if providers tag is absent -->
+  <system.web>
+    <roleManager enabled="true" defaultProvider="OracleRoleProvider">
+      <providers xdt:Transform="InsertIfMissing">
+      </providers>
+    </roleManager>
+  </system.web>
+
+  <!-- If providers tag is present but if clear tag is absent -->
+  <system.web>
+    <roleManager enabled="true" defaultProvider="OracleRoleProvider">
+      <providers>
+        <clear xdt:Transform="InsertIfMissing"/>
+      </providers>
+    </roleManager>
+  </system.web>
+
+  <!-- remove existing entry -->  
+  <system.web>
+    <roleManager enabled="true" defaultProvider="OracleRoleProvider">
+      <providers>
+        <clear/>
+          <add name="OracleRoleProvider" type="Oracle.Web.Security.OracleRoleProvider, Oracle.Web, Version=4.122.21.1, Culture=neutral, PublicKeyToken=89b483f429c47342" connectionStringName="OraAspNetConString" applicationName="" xdt:Transform="Remove" xdt:Locator="Match(name)" />
+      </providers>
+    </roleManager>
+  </system.web>
+
+  <!-- insert new entry -->
+  <system.web>
+    <roleManager enabled="true" defaultProvider="OracleRoleProvider">
+      <providers>
+        <clear/>
+          <add name="OracleRoleProvider" type="Oracle.Web.Security.OracleRoleProvider, Oracle.Web, Version=4.122.21.1, Culture=neutral, PublicKeyToken=89b483f429c47342" connectionStringName="OraAspNetConString" applicationName="" xdt:Transform="Insert" />
+      </providers>
+    </roleManager>
+  </system.web> 
+
+  <!-- If system.web tag is present but if siteMap tag is absent -->
+  <system.web>
+    <siteMap enabled="true" defaultProvider="OracleSiteMapProvider" xdt:Transform="InsertIfMissing">
+    </siteMap>
+  </system.web>
+
+  <!-- If siteMap tag is present but if providers tag is absent -->
+  <system.web>
+    <siteMap enabled="true" defaultProvider="OracleSiteMapProvider">
+      <providers xdt:Transform="InsertIfMissing">
+      </providers>
+    </siteMap>
+  </system.web>
+
+  <!-- If providers tag is present but if clear tag is absent -->
+  <system.web>
+    <siteMap enabled="true" defaultProvider="OracleSiteMapProvider">
+      <providers>
+        <clear xdt:Transform="InsertIfMissing"/>
+      </providers>
+    </siteMap>
+  </system.web>
+
+  <!-- remove existing entry -->  
+  <system.web>
+    <siteMap enabled="true" defaultProvider="OracleSiteMapProvider">
+      <providers>
+        <clear/>
+          <add name="OracleSiteMapProvider" type="Oracle.Web.SiteMap.OracleSiteMapProvider, Oracle.Web, Version=4.122.21.1, Culture=neutral, PublicKeyToken=89b483f429c47342" connectionStringName="OraAspNetConString" applicationName="" securityTrimmingEnabled="true" xdt:Transform="Remove" xdt:Locator="Match(name)" />
+      </providers>
+    </siteMap>
+  </system.web>
+
+  <!-- insert new entry -->
+  <system.web>
+    <siteMap enabled="true" defaultProvider="OracleSiteMapProvider">
+      <providers>
+        <clear/>
+          <add name="OracleSiteMapProvider" type="Oracle.Web.SiteMap.OracleSiteMapProvider, Oracle.Web, Version=4.122.21.1, Culture=neutral, PublicKeyToken=89b483f429c47342" connectionStringName="OraAspNetConString" applicationName="" securityTrimmingEnabled="true" xdt:Transform="Insert" />
+      </providers>
+    </siteMap>
+  </system.web> 
+
+  <!-- If system.web tag is present but if webParts tag is absent -->
+  <system.web>
+    <webParts xdt:Transform="InsertIfMissing">
+    </webParts>
+  </system.web>
+
+  <!-- If webParts tag is present but if personalization tag is absent -->
+  <system.web>
+    <webParts>
+      <personalization defaultProvider="OraclePersonalizationProvider" xdt:Transform="InsertIfMissing">
+      </personalization>
+    </webParts>
+  </system.web>
+
+  <!-- If personalization tag is present but if providers tag is absent -->
+  <system.web>
+    <webParts>
+      <personalization defaultProvider="OraclePersonalizationProvider">
+        <providers xdt:Transform="InsertIfMissing">
+        </providers>
+      </personalization>
+    </webParts>
+  </system.web>
+
+  <!-- If providers tag is present but if clear tag is absent -->
+  <system.web>
+    <webParts>
+      <personalization defaultProvider="OraclePersonalizationProvider">
+        <providers>
+          <clear xdt:Transform="InsertIfMissing"/>
+        </providers>
+      </personalization>
+    </webParts>
+  </system.web>
+
+  <!-- remove existing entry -->  
+  <system.web>
+    <webParts>
+      <personalization defaultProvider="OraclePersonalizationProvider">
+        <providers>
+          <clear/>
+            <add name="OraclePersonalizationProvider" type="Oracle.Web.Personalization.OraclePersonalizationProvider, Oracle.Web, Version=4.122.21.1, Culture=neutral, PublicKeyToken=89b483f429c47342" connectionStringName="OraAspNetConString" applicationName="" xdt:Transform="Remove" xdt:Locator="Match(name)" />
+        </providers>
+      </personalization>
+    </webParts>
+  </system.web>
+
+  <!-- insert new entry -->
+  <system.web>
+    <webParts>
+      <personalization defaultProvider="OraclePersonalizationProvider">
+        <providers>
+          <clear/>
+            <add name="OraclePersonalizationProvider" type="Oracle.Web.Personalization.OraclePersonalizationProvider, Oracle.Web, Version=4.122.21.1, Culture=neutral, PublicKeyToken=89b483f429c47342" connectionStringName="OraAspNetConString" applicationName="" xdt:Transform="Insert" />
+        </providers>
+      </personalization>
+    </webParts>
+  </system.web> 
+
+  <!-- If system.web tag is present but if healthMonitoring tag is absent -->
+  <system.web>
+    <healthMonitoring enabled="true" xdt:Transform="InsertIfMissing">
+    </healthMonitoring>
+  </system.web>
+
+  <!-- If healthMonitoring tag is present but if providers tag is absent -->
+  <system.web>
+    <healthMonitoring enabled="true">
+      <providers xdt:Transform="InsertIfMissing">
+      </providers>
+    </healthMonitoring>
+  </system.web>
+
+  <!-- clear tag not to be added for OracleWebEventProvider -->
+  <!-- remove existing entry -->  
+  <system.web>
+    <healthMonitoring enabled="true">
+      <providers>
+          <add name="OracleWebEventProvider" type="Oracle.Web.Management.OracleWebEventProvider, Oracle.Web, Version=4.122.21.1, Culture=neutral, PublicKeyToken=89b483f429c47342" connectionStringName="OraAspNetConString" buffer="true" bufferMode="OracleNotification" xdt:Transform="Remove" xdt:Locator="Match(name)" />
+      </providers>
+    </healthMonitoring>
+  </system.web>
+
+  <!-- insert new entry -->
+  <system.web>
+    <healthMonitoring enabled="true">
+      <providers>
+          <add name="OracleWebEventProvider" type="Oracle.Web.Management.OracleWebEventProvider, Oracle.Web, Version=4.122.21.1, Culture=neutral, PublicKeyToken=89b483f429c47342" connectionStringName="OraAspNetConString" buffer="true" bufferMode="OracleNotification" xdt:Transform="Insert" />
+      </providers>
+    </healthMonitoring>
+  </system.web> 
+
+
+  <!-- If system.web tag is present but if sessionState tag is absent -->
+  <system.web>
+    <sessionState mode="Custom" customProvider="OracleSessionStateStore" xdt:Transform="InsertIfMissing">
+    </sessionState>
+  </system.web>
+
+  <!-- If sessionState tag is present but if providers tag is absent -->
+  <system.web>
+    <sessionState mode="Custom" customProvider="OracleSessionStateStore">
+      <providers xdt:Transform="InsertIfMissing">
+      </providers>
+    </sessionState>
+  </system.web>
+
+  <!-- If providers tag is present but if clear tag is absent -->
+  <system.web>
+    <sessionState mode="Custom" customProvider="OracleSessionStateStore">
+      <providers>
+        <clear xdt:Transform="InsertIfMissing"/>
+      </providers>
+    </sessionState>
+  </system.web>
+
+  <!-- remove existing entry -->  
+  <system.web>
+    <sessionState mode="Custom" customProvider="OracleSessionStateStore">
+      <providers>
+        <clear/>
+          <add name="OracleSessionStateStore" type="Oracle.Web.SessionState.OracleSessionStateStore, Oracle.Web, Version=4.122.21.1, Culture=neutral,PublicKeyToken=89b483f429c47342" connectionStringName="OraAspNetConString" xdt:Transform="Remove" xdt:Locator="Match(name)" />
+      </providers>
+    </sessionState>
+  </system.web>
+
+  <!-- insert new entry -->
+  <system.web>
+    <sessionState mode="Custom" customProvider="OracleSessionStateStore">
+      <providers>
+        <clear/>
+          <add name="OracleSessionStateStore" type="Oracle.Web.SessionState.OracleSessionStateStore, Oracle.Web, Version=4.122.21.1, Culture=neutral,PublicKeyToken=89b483f429c47342" connectionStringName="OraAspNetConString" xdt:Transform="Insert" />
+      </providers>
+    </sessionState>
+  </system.web> 
+
+</configuration>

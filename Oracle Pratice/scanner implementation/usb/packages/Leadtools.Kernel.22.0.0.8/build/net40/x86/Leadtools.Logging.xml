@@ -1,0 +1,923 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Leadtools.Logging</name>
+  </assembly>
+  <members>
+    <member name="T:Leadtools.Logging.LoggingChannel.DebugLoggingChannel">
+      <summary>Implements a logging channel that outputs to the debug console.</summary>
+    </member>
+    <member name="M:Leadtools.Logging.LoggingChannel.DebugLoggingChannel.#ctor">
+      <summary>Initializes a new instance of the DebugLoggingChannel class.</summary>
+    </member>
+    <member name="M:Leadtools.Logging.LoggingChannel.DebugLoggingChannel.WriteLog(Leadtools.Logging.LoggingChannel.ILogEntry)">
+      <summary>Writes the log to the debug console.</summary>
+      <param name="logEntry">The log entry.</param>
+    </member>
+    <member name="T:Leadtools.Logging.LoggingChannel.EventLogLoggingChannel">
+      <summary>Implements a logging channel that outputs to the event log.</summary>
+    </member>
+    <member name="M:Leadtools.Logging.LoggingChannel.EventLogLoggingChannel.#ctor">
+      <summary>Initializes a new instance of the EventLogLoggingChannel class.</summary>
+    </member>
+    <member name="M:Leadtools.Logging.LoggingChannel.EventLogLoggingChannel.#ctor(EventLog)">
+      <summary>Initializes a new instance of the EventLogLoggingChannel class.</summary>
+      <param name="eventLog">The event log to associate with this logging channel.</param>
+    </member>
+    <member name="M:Leadtools.Logging.LoggingChannel.EventLogLoggingChannel.WriteLog(Leadtools.Logging.LoggingChannel.ILogEntry)">
+      <summary>Writes the log to the specfied event log.</summary>
+      <param name="logEntry">The log entry.</param>
+    </member>
+    <member name="P:Leadtools.Logging.LoggingChannel.EventLogLoggingChannel.Name">
+      <summary>Gets or sets the name of the log to write to.</summary>
+      <value>The name of the log. This can be Application, System, Security, or a custom log name.</value>
+    </member>
+    <member name="P:Leadtools.Logging.LoggingChannel.EventLogLoggingChannel.Source">
+      <summary>Gets or sets the source name to register and use when writing to the event log.</summary>
+      <value>The name registered with the event log as a source of entries.</value>
+    </member>
+    <member name="T:Leadtools.Logging.LoggingChannel.FileLoggingChannel">
+      <summary>Implements a logging channel that outputs to a file.</summary>
+    </member>
+    <member name="M:Leadtools.Logging.LoggingChannel.FileLoggingChannel.#ctor">
+      <summary>Initializes a new instance of the FileLoggingChannel class.</summary>
+    </member>
+    <member name="M:Leadtools.Logging.LoggingChannel.FileLoggingChannel.#ctor(System.String)">
+      <summary>Initializes a new instance of the FileLoggingChannel class.</summary>
+      <param name="path">The path to the file to write the log.</param>
+    </member>
+    <member name="M:Leadtools.Logging.LoggingChannel.FileLoggingChannel.#ctor(System.String,System.Boolean)">
+      <summary>Initializes a new instance of the FileLoggingChannel class.</summary>
+      <param name="path">The path of the file to write the log.</param>
+      <param name="append">If set to true append to the file, otherwise, overwrites the file if it exists.</param>
+    </member>
+    <member name="M:Leadtools.Logging.LoggingChannel.FileLoggingChannel.Close">
+      <summary>Closes this log file.</summary>
+    </member>
+    <member name="M:Leadtools.Logging.LoggingChannel.FileLoggingChannel.Dispose">
+      <summary>Releases unmanaged resources and will optionally release managed resources</summary>
+    </member>
+    <member name="M:Leadtools.Logging.LoggingChannel.FileLoggingChannel.Flush">
+      <summary>Clears all buffers for the file stream and causes any buffered data to be written to the file system.</summary>
+    </member>
+    <member name="M:Leadtools.Logging.LoggingChannel.FileLoggingChannel.WriteLog(Leadtools.Logging.LoggingChannel.ILogEntry)">
+      <summary>Writes the log to the specified file.</summary>
+      <param name="logEntry">The log entry.</param>
+    </member>
+    <member name="M:Leadtools.Logging.LoggingChannel.FileLoggingChannel.Finalize">
+      <summary>Releases unmanaged resources and performs other cleanup operations before the FileLoggingChannel is reclaimed by garbage collection.</summary>
+    </member>
+    <member name="P:Leadtools.Logging.LoggingChannel.FileLoggingChannel.Filename">
+      <summary>Gets or sets the filename to write the log to.</summary>
+      <value>The filename.</value>
+    </member>
+    <member name="F:Leadtools.Logging.LoggingChannel.FileLoggingChannel.FileStreamWriter">
+      <summary>The file stream for this logging channel.</summary>
+    </member>
+    <member name="T:Leadtools.Logging.LoggingChannel.LoggingChannel">
+      <summary>Provides a base implementation of a LoggingChannel.</summary>
+    </member>
+    <member name="M:Leadtools.Logging.LoggingChannel.LoggingChannel.#ctor">
+      <summary>Initializes a new instance of the LoggingChannel class.</summary>
+    </member>
+    <member name="M:Leadtools.Logging.LoggingChannel.LoggingChannel.Dispose">
+      <summary>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</summary>
+    </member>
+    <member name="M:Leadtools.Logging.LoggingChannel.LoggingChannel.Format(Leadtools.Logging.LoggingChannel.ILogEntry)">
+      <summary>Formats the specified log entry.</summary>
+      <param name="logEntry">The log entry.</param>
+      <returns>An XML serialized string that represents the log entry.</returns>
+    </member>
+    <member name="M:Leadtools.Logging.LoggingChannel.LoggingChannel.WriteLog(Leadtools.Logging.LoggingChannel.ILogEntry)">
+      <summary>Writes the log to the specific channel destination.</summary>
+      <param name="logEntry">The log entry.</param>
+    </member>
+    <member name="P:Leadtools.Logging.LoggingChannel.LoggingChannel.Enabled">
+      <summary>Gets or sets a value indicating whether this Leadtools.Logging.ILoggingChannel is enabled.</summary>
+      <value>true if enabled; otherwise, false</value>
+    </member>
+    <member name="T:Leadtools.Logging.LoggingChannel.RollingFileLoggingChannel">
+      <summary>Implements a logging channel that writes to a file.</summary>
+    </member>
+    <member name="M:Leadtools.Logging.LoggingChannel.RollingFileLoggingChannel.#ctor">
+      <summary>Initializes a new instance of the RollingFileLoggingChannel class.</summary>
+    </member>
+    <member name="M:Leadtools.Logging.LoggingChannel.RollingFileLoggingChannel.#ctor(System.String)">
+      <summary>Initializes a new instance of the RollingFileLoggingChannel class.</summary>
+      <param name="path">The path to the file to write the log.</param>
+    </member>
+    <member name="M:Leadtools.Logging.LoggingChannel.RollingFileLoggingChannel.#ctor(System.String,System.Boolean)">
+      <summary>Initializes a new instance of the RollingFileLoggingChannel class.</summary>
+      <param name="path">The path of the file to write the log.</param>
+      <param name="append">If set to `true` append to the file, otherwise overwrite the file.</param>
+    </member>
+    <member name="M:Leadtools.Logging.LoggingChannel.RollingFileLoggingChannel.Format(Leadtools.Logging.LoggingChannel.ILogEntry)">
+      <summary>Formats the specified log entry.</summary>
+      <param name="logEntry">The log entry to format.</param>
+      <returns>An xml serialized string that represents the log entry.</returns>
+    </member>
+    <member name="M:Leadtools.Logging.LoggingChannel.RollingFileLoggingChannel.WriteLog(Leadtools.Logging.LoggingChannel.ILogEntry)">
+      <summary>Writes the log to the specified file.</summary>
+      <param name="logEntry">The log entry.</param>
+    </member>
+    <member name="P:Leadtools.Logging.LoggingChannel.RollingFileLoggingChannel.Filename">
+      <summary>Gets or sets the filename to write the log to.</summary>
+      <value>The filename.</value>
+    </member>
+    <member name="P:Leadtools.Logging.LoggingChannel.RollingFileLoggingChannel.RollSize">
+      <summary>Gets or sets the maximum size of the file before a roll occurs.</summary>
+      <value>The maximum size of a log file.</value>
+    </member>
+    <member name="T:Leadtools.Logging.LoggingChannel.SysLogLoggingChannel">
+      <summary>Implements a logging channel that writes to a syslog server.</summary>
+    </member>
+    <member name="M:Leadtools.Logging.LoggingChannel.SysLogLoggingChannel.#ctor">
+      <summary>Initializes a new instance of the SysLogLoggingChannel class.</summary>
+    </member>
+    <member name="M:Leadtools.Logging.LoggingChannel.SysLogLoggingChannel.#ctor(IPAddress)">
+      <summary>Initializes a new instance of the SysLogLoggingChannel class.</summary>
+      <param name="ip">The syslog server ip address.</param>
+    </member>
+    <member name="M:Leadtools.Logging.LoggingChannel.SysLogLoggingChannel.#ctor(IPAddress,System.Int32)">
+      <summary>Initializes a new instance of the SysLogLoggingChannel class.</summary>
+      <param name="ip">The syslog server ip address.</param>
+      <param name="port">The syslog server port.</param>
+    </member>
+    <member name="M:Leadtools.Logging.LoggingChannel.SysLogLoggingChannel.#ctor(System.String)">
+      <summary>Initializes a new instance of the SysLogLoggingChannel class.</summary>
+      <param name="hostname">The syslog server hostname.</param>
+    </member>
+    <member name="M:Leadtools.Logging.LoggingChannel.SysLogLoggingChannel.#ctor(System.String,System.Int32)">
+      <summary>Initializes a new instance of the SysLogLoggingChannel class.</summary>
+      <param name="hostname">The syslog server hostname.</param>
+      <param name="port">The syslog server port.</param>
+    </member>
+    <member name="M:Leadtools.Logging.LoggingChannel.SysLogLoggingChannel.Dispose">
+      <summary>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</summary>
+    </member>
+    <member name="M:Leadtools.Logging.LoggingChannel.SysLogLoggingChannel.Send(Leadtools.Logging.LoggingChannel.ILogEntry)">
+      <summary>Sends the specified log entry to the syslog server.</summary>
+      <param name="logEntry">The log entry.</param>
+    </member>
+    <member name="M:Leadtools.Logging.LoggingChannel.SysLogLoggingChannel.WriteLog(Leadtools.Logging.LoggingChannel.ILogEntry)">
+      <summary>Writes the log to the specific syslog server.</summary>
+      <param name="logEntry">The log entry.</param>
+    </member>
+    <member name="P:Leadtools.Logging.LoggingChannel.SysLogLoggingChannel.Hostname">
+      <summary>Gets or sets the hostname of the syslog server.</summary>
+      <value>The hostname.</value>
+    </member>
+    <member name="P:Leadtools.Logging.LoggingChannel.SysLogLoggingChannel.IPAddress">
+      <summary>Gets or sets the IP address of the syslog server.</summary>
+      <value>The IP address.</value>
+    </member>
+    <member name="P:Leadtools.Logging.LoggingChannel.SysLogLoggingChannel.Port">
+      <summary>Gets or sets the port of the syslog server.</summary>
+      <value>The port.</value>
+    </member>
+    <member name="T:Leadtools.Logging.LoggingChannel.Facility">
+      <summary>Identifies the application or component that generated the log message.</summary>
+    </member>
+    <member name="F:Leadtools.Logging.LoggingChannel.Facility.Kernel">
+      <summary>Kernel message.</summary>
+      <value>0</value>
+    </member>
+    <member name="F:Leadtools.Logging.LoggingChannel.Facility.UserLevel">
+      <summary>User-level.</summary>
+      <value>1</value>
+    </member>
+    <member name="F:Leadtools.Logging.LoggingChannel.Facility.MailSystem">
+      <summary>Mail system.</summary>
+      <value>2</value>
+    </member>
+    <member name="F:Leadtools.Logging.LoggingChannel.Facility.SystemDaemon">
+      <summary>System daemon.</summary>
+      <value>3</value>
+    </member>
+    <member name="F:Leadtools.Logging.LoggingChannel.Facility.Security1">
+      <summary>Security/authorization message.</summary>
+      <value>4</value>
+    </member>
+    <member name="F:Leadtools.Logging.LoggingChannel.Facility.SyslogdInternal">
+      <summary>Internal syslog message.</summary>
+      <value>5</value>
+    </member>
+    <member name="F:Leadtools.Logging.LoggingChannel.Facility.LinePrinter">
+      <summary>Line printer subsystem message.</summary>
+      <value>6</value>
+    </member>
+    <member name="F:Leadtools.Logging.LoggingChannel.Facility.NetworkNews">
+      <summary>Network news subsystem message.</summary>
+      <value>7</value>
+    </member>
+    <member name="F:Leadtools.Logging.LoggingChannel.Facility.UUCP">
+      <summary>UUCP subsystem message.</summary>
+      <value>8</value>
+    </member>
+    <member name="F:Leadtools.Logging.LoggingChannel.Facility.Clock1">
+      <summary>Clock daemon message.</summary>
+      <value>9</value>
+    </member>
+    <member name="F:Leadtools.Logging.LoggingChannel.Facility.Security2">
+      <summary>Security/authorization message.</summary>
+      <value>10</value>
+    </member>
+    <member name="F:Leadtools.Logging.LoggingChannel.Facility.FTP">
+      <summary>FTP daemon message.</summary>
+      <value>11</value>
+    </member>
+    <member name="F:Leadtools.Logging.LoggingChannel.Facility.NTP">
+      <summary>NTP subsystem message.</summary>
+      <value>12</value>
+    </member>
+    <member name="F:Leadtools.Logging.LoggingChannel.Facility.LogAudit">
+      <summary>Log audit message.</summary>
+      <value>13</value>
+    </member>
+    <member name="F:Leadtools.Logging.LoggingChannel.Facility.LogAlert">
+      <summary>Log alert message.</summary>
+      <value>14</value>
+    </member>
+    <member name="F:Leadtools.Logging.LoggingChannel.Facility.Clock2">
+      <summary>Clock daemon.</summary>
+      <value>15</value>
+    </member>
+    <member name="F:Leadtools.Logging.LoggingChannel.Facility.Local0">
+      <summary>Local use 0 message.</summary>
+      <value>16</value>
+    </member>
+    <member name="F:Leadtools.Logging.LoggingChannel.Facility.Local1">
+      <summary>Local use 1 message.</summary>
+      <value>17</value>
+    </member>
+    <member name="F:Leadtools.Logging.LoggingChannel.Facility.Local2">
+      <summary>Local use 2 message.</summary>
+      <value>18</value>
+    </member>
+    <member name="F:Leadtools.Logging.LoggingChannel.Facility.Local3">
+      <summary>Local use 3 message.</summary>
+      <value>19</value>
+    </member>
+    <member name="F:Leadtools.Logging.LoggingChannel.Facility.Local4">
+      <summary>Local use 4 message.</summary>
+      <value>20</value>
+    </member>
+    <member name="F:Leadtools.Logging.LoggingChannel.Facility.Local5">
+      <summary>Local use 5 message.</summary>
+      <value>21</value>
+    </member>
+    <member name="F:Leadtools.Logging.LoggingChannel.Facility.Local6">
+      <summary>Local use 6 message.</summary>
+      <value>22</value>
+    </member>
+    <member name="F:Leadtools.Logging.LoggingChannel.Facility.Local7">
+      <summary>Local use 7 message.</summary>
+      <value>23</value>
+    </member>
+    <member name="T:Leadtools.Logging.LoggingChannel.Severity">
+      <summary>The severity of the message.</summary>
+    </member>
+    <member name="F:Leadtools.Logging.LoggingChannel.Severity.Emergency">
+      <summary>The system is unusable.</summary>
+      <value>0</value>
+    </member>
+    <member name="F:Leadtools.Logging.LoggingChannel.Severity.Alert">
+      <summary>(0x0000000E)Action must be taken immediately.</summary>
+      <value>1</value>
+    </member>
+    <member name="F:Leadtools.Logging.LoggingChannel.Severity.Critical">
+      <summary>Critical condition.</summary>
+      <value>2</value>
+    </member>
+    <member name="F:Leadtools.Logging.LoggingChannel.Severity.Error">
+      <summary>There is an error condition.</summary>
+      <value>3</value>
+    </member>
+    <member name="F:Leadtools.Logging.LoggingChannel.Severity.Warning">
+      <summary>There is a warning condition.</summary>
+      <value>4</value>
+    </member>
+    <member name="F:Leadtools.Logging.LoggingChannel.Severity.Notice">
+      <summary>There is a normal but significant condition.</summary>
+      <value>5</value>
+    </member>
+    <member name="F:Leadtools.Logging.LoggingChannel.Severity.Informational">
+      <summary>Information message.</summary>
+      <value>6</value>
+    </member>
+    <member name="F:Leadtools.Logging.LoggingChannel.Severity.Debug">
+      <summary>Debug-level message.</summary>
+      <value>7</value>
+    </member>
+    <member name="T:Leadtools.Logging.Configuration.ChannelCollection">
+      <summary>Represents a collection of ChannelElement configuration items.</summary>
+    </member>
+    <member name="M:Leadtools.Logging.Configuration.ChannelCollection.#ctor">
+      <summary>Initializes a new instance of the ChannelCollection class.</summary>
+    </member>
+    <member name="M:Leadtools.Logging.Configuration.ChannelCollection.Add(Leadtools.Logging.Configuration.ChannelElement)">
+      <summary>Adds the specified option.</summary>
+      <param name="option">The Channel option to add.</param>
+    </member>
+    <member name="M:Leadtools.Logging.Configuration.ChannelCollection.Clear">
+      <summary>Clears this instance.</summary>
+    </member>
+    <member name="M:Leadtools.Logging.Configuration.ChannelCollection.ContainsKey(System.String)">
+      <summary>Determines whether the specified name contains key.</summary>
+      <param name="name">The name.</param>
+      <returns>true if the specified name contains key; otherwise, false.</returns>
+    </member>
+    <member name="M:Leadtools.Logging.Configuration.ChannelCollection.IsReadOnly">
+      <summary>Gets a value indicating whether the ChannelCollection object is read only.</summary>
+      <returns>true if the ChannelCollection object is read only; otherwise, false.</returns>
+    </member>
+    <member name="M:Leadtools.Logging.Configuration.ChannelCollection.CreateNewElement">
+      <summary>Creates a new System.Configuration.ConfigurationElement when overridden in a derived class.</summary>
+      <returns>A new System.Configuration.ConfigurationElement.</returns>
+    </member>
+    <member name="M:Leadtools.Logging.Configuration.ChannelCollection.GetElementKey(ConfigurationElement)">
+      <summary>Gets the element key for a specified configuration element when overridden in a derived class.</summary>
+      <param name="element">The System.Configuration.ConfigurationElement to return the key for.</param>
+      <returns>A System.Object that acts as the key for the specified System.Configuration.ConfigurationElement.</returns>
+    </member>
+    <member name="P:Leadtools.Logging.Configuration.ChannelCollection.CollectionType">
+      <summary>Gets the type of the System.Configuration.ConfigurationElementCollection.</summary>
+      <value>The System.Configuration.ConfigurationElementCollectionType of this collection.</value>
+    </member>
+    <member name="P:Leadtools.Logging.Configuration.ChannelCollection.Item">
+      <summary>Gets or sets the ChannelElement at the specified index.</summary>
+      <param name="index">The index of the LoggerElement to get.</param>
+      <value>The ChannelElement at the specified index.</value>
+    </member>
+    <member name="P:Leadtools.Logging.Configuration.ChannelCollection.Item">
+      <summary>Gets the ChannelElement with the specified name.</summary>
+      <param name="name">The name of the LoggerElement to get.</param>
+      <value>The channel element with the specified name.</value>
+    </member>
+    <member name="P:Leadtools.Logging.Configuration.ChannelCollection.ElementName">
+      <summary>Gets the name used to identify this collection of elements in the configuration file when overridden in a derived class.</summary>
+      <value>The name of the collection; otherwise, an empty string. The default is an empty string.</value>
+    </member>
+    <member name="T:Leadtools.Logging.Configuration.ChannelElement">
+      <summary>Represents a LoggerChannel defined in application configuration file.</summary>
+    </member>
+    <member name="M:Leadtools.Logging.Configuration.ChannelElement.#ctor">
+      <summary>Initializes a new instance of the ChannelElement class.</summary>
+    </member>
+    <member name="M:Leadtools.Logging.Configuration.ChannelElement.GetChannel">
+      <summary>Gets the logging channel this configuration element represents.</summary>
+      <returns>The ILoggingChannel this configuration represents.</returns>
+    </member>
+    <member name="M:Leadtools.Logging.Configuration.ChannelElement.IsReadOnly">
+      <summary>Gets a value indicating whether the ChannelElement object is read-only.</summary>
+      <returns>true if the ChannelElement object is read-only; otherwise, false.</returns>
+    </member>
+    <member name="M:Leadtools.Logging.Configuration.ChannelElement.OnDeserializeUnrecognizedAttribute(System.String,System.String)">
+      <summary>Gets a value indicating whether an unknown attribute is encountered during deserialization.</summary>
+      <param name="name">The name of the unrecognized attribute.</param>
+      <param name="value">The value of the unrecognized attribute.</param>
+      <returns>true when an unknown attribute is encountered while deserializing; otherwise, false.</returns>
+    </member>
+    <member name="M:Leadtools.Logging.Configuration.ChannelElement.SerializeElement(XmlWriter,System.Boolean)">
+      <summary>Writes the contents of this configuration element to the configuration file when implemented in a derived class.</summary>
+      <param name="writer">The System.Xml.XmlWriter that writes to the configuration file.</param>
+      <param name="serializeCollectionKey">true to serialize only the collection key properties; otherwise, false.</param>
+      <returns>true if any data was actually serialized; otherwise, false.</returns>
+    </member>
+    <member name="P:Leadtools.Logging.Configuration.ChannelElement.Channel">
+      <summary>Gets or sets the logging channel this configuration represents.</summary>
+      <value>The logging channel.</value>
+    </member>
+    <member name="P:Leadtools.Logging.Configuration.ChannelElement.Enabled">
+      <summary>Gets or sets a value indicating whether this ChannelElement is enabled.</summary>
+      <value>true if enabled; otherwise, false.</value>
+    </member>
+    <member name="T:Leadtools.Logging.Configuration.ConfigSectionHandler">
+      <summary>Section handler for logging configuration.</summary>
+    </member>
+    <member name="M:Leadtools.Logging.Configuration.ConfigSectionHandler.#ctor">
+      <summary>Initializes a new instance of the ConfigSectionHandler class.</summary>
+    </member>
+    <member name="M:Leadtools.Logging.Configuration.ConfigSectionHandler.IsReadOnly">
+      <summary>Gets a value indicating whether the ConfigSectionHandler object is read-only.</summary>
+      <returns>true if the ConfigSectionHandler object is read-only; otherwise, false.</returns>
+    </member>
+    <member name="P:Leadtools.Logging.Configuration.ConfigSectionHandler.Channels">
+      <summary>Gets the global logging channels.</summary>
+      <value>The global logging channels.</value>
+    </member>
+    <member name="P:Leadtools.Logging.Configuration.ConfigSectionHandler.Enabled">
+      <summary>Gets a value indicating whether the logging is enabled.</summary>
+      <value>true if logging is enabled; otherwise, false.</value>
+    </member>
+    <member name="P:Leadtools.Logging.Configuration.ConfigSectionHandler.EnabledThreading">
+      <summary>Gets a value indicating whether the logging will be handled in its own thread.</summary>
+      <value>true if logging is handled in its own thread; otherwise, false.</value>
+    </member>
+    <member name="P:Leadtools.Logging.Configuration.ConfigSectionHandler.EventLogFilter">
+      <summary>Gets a value representing the Leadtools.Logging.IEventLogFilter.</summary>
+      <value>a value representing the Leadtools.Logging.IEventLogFilter.</value>
+    </member>
+    <member name="P:Leadtools.Logging.Configuration.ConfigSectionHandler.EventLogFilterType">
+      <summary>Gets the value of the EventLogFilterType configuration element.</summary>
+      <value>the value of the EventLogFilterType configuration element.</value>
+    </member>
+    <member name="P:Leadtools.Logging.Configuration.ConfigSectionHandler.LogFilter">
+      <summary>Gets the value of LogFilter configuration element.</summary>
+      <value>A LogFilterConfigurationElement that defines the log filter.</value>
+    </member>
+    <member name="P:Leadtools.Logging.Configuration.ConfigSectionHandler.Loggers">
+      <summary>Gets the value of the loggers configuration element</summary>
+      <value>The loggers.</value>
+    </member>
+    <member name="F:Leadtools.Logging.Configuration.ConfigSectionHandler.ChannelsPropertyName">
+      <summary>Represents the name of the decorated Channels configuration-element property.</summary>
+    </member>
+    <member name="F:Leadtools.Logging.Configuration.ConfigSectionHandler.EnabledPropertyName">
+      <summary>Represents the name of the decorated Enabled configuration-element property.</summary>
+    </member>
+    <member name="F:Leadtools.Logging.Configuration.ConfigSectionHandler.EnabledThreadingPropertyName">
+      <summary>Represents the name of the decorated EnabledThreading configuration-element property.</summary>
+    </member>
+    <member name="F:Leadtools.Logging.Configuration.ConfigSectionHandler.EventLogFilterPropertyName">
+      <summary>Represents the name of the decorated EventLogFilterType configuration-element property.</summary>
+    </member>
+    <member name="F:Leadtools.Logging.Configuration.ConfigSectionHandler.LogFilterPropertyName">
+      <summary>Represents the name of the decorated LogFilter configuration-element property.</summary>
+    </member>
+    <member name="F:Leadtools.Logging.Configuration.ConfigSectionHandler.LoggersPropertyName">
+      <summary>Represents the name of the decorated Loggers configuration-element property.</summary>
+    </member>
+    <member name="T:Leadtools.Logging.Configuration.LogFilterConfigurationElement">
+      <summary>Represents a log filter configuration element within a configuration file</summary>
+    </member>
+    <member name="M:Leadtools.Logging.Configuration.LogFilterConfigurationElement.#ctor">
+      <summary>Initializes a new instance of this class.</summary>
+    </member>
+    <member name="P:Leadtools.Logging.Configuration.LogFilterConfigurationElement.LogType">
+      <summary>Gets a value indicating the log type.</summary>
+      <value>A LogTypeConfigurationElement value that indicates the log type.</value>
+    </member>
+    <member name="F:Leadtools.Logging.Configuration.LogFilterConfigurationElement.LogTypePropertyName">
+      <summary>Represents the name of the decorated LogType configuration-element property.</summary>
+    </member>
+    <member name="T:Leadtools.Logging.Configuration.LoggerCollection">
+      <summary>Represents a collection of loggers defined by the application configuration.</summary>
+    </member>
+    <member name="M:Leadtools.Logging.Configuration.LoggerCollection.#ctor">
+      <summary>Initializes a new instance of the LoggerCollection class.</summary>
+    </member>
+    <member name="M:Leadtools.Logging.Configuration.LoggerCollection.Add(Leadtools.Logging.Configuration.LoggerElement)">
+      <summary>Adds the specified logger element.</summary>
+      <param name="option">The logger option to add.</param>
+    </member>
+    <member name="M:Leadtools.Logging.Configuration.LoggerCollection.ContainsKey(System.String)">
+      <summary>Determines whether the specified name contains key.</summary>
+      <param name="name">The name.</param>
+      <returns>true if the specified name contains key; otherwise, false</returns>
+    </member>
+    <member name="M:Leadtools.Logging.Configuration.LoggerCollection.IsReadOnly">
+      <summary>Gets a value indicating whether the LoggerCollection object is read only.</summary>
+      <returns>true if the LoggerCollection object is read only; otherwise, false.</returns>
+    </member>
+    <member name="M:Leadtools.Logging.Configuration.LoggerCollection.CreateNewElement">
+      <summary>When overridden in a derived class, creates a new System.Configuration.ConfigurationElement.</summary>
+      <returns>A new System.Configuration.ConfigurationElement.</returns>
+    </member>
+    <member name="M:Leadtools.Logging.Configuration.LoggerCollection.GetElementKey(ConfigurationElement)">
+      <summary>Gets the element key for a specified configuration element when overridden in a derived class.</summary>
+      <param name="element">The System.Configuration.ConfigurationElement to return the key for.</param>
+      <returns>An System.Object that acts as the key for the specified System.Configuration.ConfigurationElement.</returns>
+    </member>
+    <member name="P:Leadtools.Logging.Configuration.LoggerCollection.CollectionType">
+      <summary>Gets the type of the System.Configuration.ConfigurationElementCollection.</summary>
+      <value>The System.Configuration.ConfigurationElementCollectionType of this collection.</value>
+    </member>
+    <member name="P:Leadtools.Logging.Configuration.LoggerCollection.Item">
+      <summary>Gets or sets the LoggerElement at the specified index.</summary>
+      <param name="index">The index of the LoggerElement to get.</param>
+      <value>The LoggerElement at the specified index.</value>
+    </member>
+    <member name="P:Leadtools.Logging.Configuration.LoggerCollection.Item">
+      <summary>Gets the LoggerElement with the specified name.</summary>
+      <param name="name">The name of the LoggerElement to get.</param>
+      <value>The LoggerElement with the specified name.</value>
+    </member>
+    <member name="P:Leadtools.Logging.Configuration.LoggerCollection.ElementName">
+      <summary>Gets the name used to identify this collection of elements in the configuration file when overridden in a derived class.</summary>
+      <value>The name of the collection; otherwise, an empty string. The default is an empty string.</value>
+    </member>
+    <member name="T:Leadtools.Logging.Configuration.LoggerElement">
+      <summary>Represents a logger configuration element.</summary>
+    </member>
+    <member name="M:Leadtools.Logging.Configuration.LoggerElement.#ctor">
+      <summary>Initializes a new instance of the LoggerElement class.</summary>
+    </member>
+    <member name="M:Leadtools.Logging.Configuration.LoggerElement.GetChannels">
+      <summary>Gets the channels that are specified in this configuration element.</summary>
+      <returns>The list of channels configured for this LoggerElement.</returns>
+    </member>
+    <member name="M:Leadtools.Logging.Configuration.LoggerElement.IsReadOnly">
+      <summary>Gets a value indicating whether the System.Configuration.ConfigurationElement object is read-only.</summary>
+      <returns>true if the System.Configuration.ConfigurationElement object is read-only; otherwise, false.</returns>
+    </member>
+    <member name="P:Leadtools.Logging.Configuration.LoggerElement.Channels">
+      <summary>Gets or sets the channels.</summary>
+      <value>The channels.</value>
+    </member>
+    <member name="P:Leadtools.Logging.Configuration.LoggerElement.Name">
+      <summary>Gets or sets the name of the element.</summary>
+      <value>The name of the element.</value>
+    </member>
+    <member name="F:Leadtools.Logging.Configuration.LoggerElement.nameProperty">
+      <summary>Name of the property that holds the name of LoggerElement.</summary>
+    </member>
+    <member name="T:Leadtools.Logging.Configuration.LogTypeConfigurationElement">
+      <summary>Represents a log type configuration element within a configuration file</summary>
+    </member>
+    <member name="M:Leadtools.Logging.Configuration.LogTypeConfigurationElement.#ctor">
+      <summary>Initializes a new instance of this class.</summary>
+    </member>
+    <member name="P:Leadtools.Logging.Configuration.LogTypeConfigurationElement.Audit">
+      <summary>Gets a value indicating whether to log 'audit' messages</summary>
+      <value>true to log 'audit' messages; otherwise, it is false.</value>
+    </member>
+    <member name="P:Leadtools.Logging.Configuration.LogTypeConfigurationElement.Debug">
+      <summary>Gets a value indicating whether to log 'debug' messages</summary>
+      <value>true to log 'debug' messages; otherwise, it is false.</value>
+    </member>
+    <member name="P:Leadtools.Logging.Configuration.LogTypeConfigurationElement.Error">
+      <summary>Gets a value indicating whether to log 'error' messages</summary>
+      <value>true to log 'information' messages; otherwise, it is false.</value>
+    </member>
+    <member name="P:Leadtools.Logging.Configuration.LogTypeConfigurationElement.Information">
+      <summary>Gets a value indicating whether to log 'information' messages</summary>
+      <value>true to log 'information' messages; otherwise, it is false.</value>
+    </member>
+    <member name="P:Leadtools.Logging.Configuration.LogTypeConfigurationElement.Warning">
+      <summary>Gets a value indicating whether to log 'warning' messages</summary>
+      <value>true to log 'warning' messages; otherwise, it is false.</value>
+    </member>
+    <member name="F:Leadtools.Logging.Configuration.LogTypeConfigurationElement.AuditPropertyName">
+      <summary>Represents the name of the decorated Audit configuration-element property.</summary>
+    </member>
+    <member name="F:Leadtools.Logging.Configuration.LogTypeConfigurationElement.DebugPropertyName">
+      <summary>Represents the name of the decorated Debug configuration-element property.</summary>
+    </member>
+    <member name="F:Leadtools.Logging.Configuration.LogTypeConfigurationElement.ErrorPropertyName">
+      <summary>Represents the name of the decorated Error configuration-element property.</summary>
+    </member>
+    <member name="F:Leadtools.Logging.Configuration.LogTypeConfigurationElement.InformationPropertyName">
+      <summary>Represents the name of the decorated Information configuration-element property.</summary>
+    </member>
+    <member name="F:Leadtools.Logging.Configuration.LogTypeConfigurationElement.WarningPropertyName">
+      <summary>Represents the name of the decorated Warning configuration-element property.</summary>
+    </member>
+    <member name="T:Leadtools.Logging.Configuration.TypeConfigurationElement">
+      <summary>Represents a System.Configuration.ConfigurationElement that has a name and type.</summary>
+    </member>
+    <member name="M:Leadtools.Logging.Configuration.TypeConfigurationElement.#ctor">
+      <summary>Initializes an instance of the TypeConfigurationElement class.</summary>
+    </member>
+    <member name="M:Leadtools.Logging.Configuration.TypeConfigurationElement.#ctor(System.String,System.Type)">
+      <summary>Initialize an instance of the TypeConfigurationElement class</summary>
+      <param name="name">The name of the element.</param>
+      <param name="type">The Type that this element is the configuration for.</param>
+    </member>
+    <member name="M:Leadtools.Logging.Configuration.TypeConfigurationElement.IsReadOnly">
+      <summary>Gets a value indicating whether the TypeConfigurationElement object is read-only.</summary>
+      <returns>true if the TypeConfigurationElement object is read-only; otherwise, false.</returns>
+    </member>
+    <member name="P:Leadtools.Logging.Configuration.TypeConfigurationElement.Name">
+      <summary>Gets or sets the name of the element.</summary>
+      <value>The name of the element.</value>
+    </member>
+    <member name="P:Leadtools.Logging.Configuration.TypeConfigurationElement.Type">
+      <summary>Gets or sets the Type the element is the configuration for.</summary>
+      <value>The Type the element is the configuration for.</value>
+    </member>
+    <member name="P:Leadtools.Logging.Configuration.TypeConfigurationElement.TypeName">
+      <summary>Gets or sets the fully qualified name of the Type the element is the configuration for.</summary>
+      <value>The fully qualified name of the Type the element is the configuration for.</value>
+    </member>
+    <member name="F:Leadtools.Logging.Configuration.TypeConfigurationElement.nameProperty">
+      <summary>Name of the property that holds the name of System.Configuration.ConfigurationElement.</summary>
+    </member>
+    <member name="F:Leadtools.Logging.Configuration.TypeConfigurationElement.typeProperty">
+      <summary>Name of the property that holds the type of System.Configuration.ConfigurationElement.</summary>
+    </member>
+    <member name="T:Leadtools.Logging.Configuration.TypeNameConverter">
+      <summary>Converts a configuration value to and from a type.</summary>
+    </member>
+    <member name="M:Leadtools.Logging.Configuration.TypeNameConverter.#ctor">
+      <summary>Initializes a new instance of the TypeNameConverter class.</summary>
+    </member>
+    <member name="M:Leadtools.Logging.Configuration.TypeNameConverter.ConvertFrom(ITypeDescriptorContext,CultureInfo,System.Object)">
+      <summary>Returns a type based on the assembly qualified name passed in as data.</summary>
+      <param name="context">The container representing this System.ComponentModel.TypeDescriptor.</param>
+      <param name="culture">Culture info for assembly.</param>
+      <param name="value">Data to convert.</param>
+      <returns>Type of the data</returns>
+    </member>
+    <member name="M:Leadtools.Logging.Configuration.TypeNameConverter.ConvertTo(ITypeDescriptorContext,CultureInfo,System.Object,System.Type)">
+      <summary>Returns the assembly qualified name for the passed in Type.</summary>
+      <param name="context">The container representing this System.ComponentModel.TypeDescriptor.</param>
+      <param name="culture">Culture info for assembly.</param>
+      <param name="value">Value to convert.</param>
+      <param name="destinationType">Type to convert to.</param>
+      <returns>The assembly qualified name as a string.</returns>
+    </member>
+    <member name="T:Leadtools.Logging.EventLogFilter">
+      <summary>Defines a class specifying a filter for the EventLog.</summary>
+    </member>
+    <member name="M:Leadtools.Logging.EventLogFilter.#ctor">
+      <summary>Initializes a new instance of the EventLogFilter class.</summary>
+    </member>
+    <member name="M:Leadtools.Logging.EventLogFilter.CanLog(Leadtools.Logging.ILogEntry)">
+      <summary>Determines if the ILogEntry can be logged.</summary>
+      <param name="logEntry">The ILogEntry that is to be logged.</param>
+      <returns>true if the ILogEntry can be logged; false otherwise</returns>
+    </member>
+    <member name="M:Leadtools.Logging.EventLogFilter.Configure(Leadtools.Logging.LogFilterConfigurationElement)">
+      <summary>Configures the EventLogFilter according to the settings specified in _configuration_.</summary>
+      <param name="configuration">Specifies the configure settings.</param>
+    </member>
+    <member name="P:Leadtools.Logging.EventLogFilter.LogAudit">
+      <summary>Gets or sets a value indicating whether the logging of 'Audit' messages is enabled.</summary>
+      <value>true if enabled; otherwise, false.</value>
+    </member>
+    <member name="P:Leadtools.Logging.EventLogFilter.LogDebug">
+      <summary>Gets or sets a value indicating whether the logging of 'Debug' messages is enabled.</summary>
+      <value>true if enabled; otherwise, false.</value>
+    </member>
+    <member name="P:Leadtools.Logging.EventLogFilter.LogErrors">
+      <summary>Gets or sets a value indicating whether the logging of 'Error' messages is enabled.</summary>
+      <value>true if enabled; otherwise, false.</value>
+    </member>
+    <member name="P:Leadtools.Logging.EventLogFilter.LogInformation">
+      <summary>Gets or sets a value indicating whether the logging of 'Information' messages is enabled.</summary>
+      <value>true if enabled; otherwise, false.</value>
+    </member>
+    <member name="P:Leadtools.Logging.EventLogFilter.LogWarnings">
+      <summary>Gets or sets a value indicating whether the logging of 'Warning' messages is enabled.</summary>
+      <value>true if enabled; otherwise, false.</value>
+    </member>
+    <member name="T:Leadtools.Logging.LogEntry">
+      <summary>Base class implementation of ILogEntry.</summary>
+    </member>
+    <member name="M:Leadtools.Logging.LogEntry.#ctor">
+      <summary>Initializes a new instance of the LogEntry class.</summary>
+    </member>
+    <member name="P:Leadtools.Logging.LogEntry.CustomInformation">
+      <summary>Gets the custom information associated with the log entry.</summary>
+      <value>The custom information associated with the log entry.</value>
+    </member>
+    <member name="P:Leadtools.Logging.LogEntry.LogType">
+      <summary>Gets or sets the type of the log entry.</summary>
+      <value>The type of the log entry.</value>
+    </member>
+    <member name="P:Leadtools.Logging.LogEntry.MachineName">
+      <summary>Gets or sets the name of the machine that created the entry.</summary>
+      <value>The name of the machine that created the entry.</value>
+    </member>
+    <member name="P:Leadtools.Logging.LogEntry.Message">
+      <summary>Gets or sets the message for the log entry.</summary>
+      <value>The message for the log entry.</value>
+    </member>
+    <member name="P:Leadtools.Logging.LogEntry.Source">
+      <summary>Gets or sets the source of the log entry.</summary>
+      <value>The source of the log entry.</value>
+    </member>
+    <member name="P:Leadtools.Logging.LogEntry.TimeStamp">
+      <summary>Gets or sets the time stamp of when this entry was created.</summary>
+      <value>The time stamp.</value>
+    </member>
+    <member name="T:Leadtools.Logging.LogEventArgs">
+      <summary>Provides data for the Logger.Logging and Logger.Logged events.</summary>
+    </member>
+    <member name="M:Leadtools.Logging.LogEventArgs.#ctor(Leadtools.Logging.ILogEntry)">
+      <summary>Initializes a new instance of the LogEventArgs class.</summary>
+      <param name="entry">The ILogEntry object that represents the item being logged.</param>
+    </member>
+    <member name="P:Leadtools.Logging.LogEventArgs.LogEntry">
+      <summary>Gets the ILogEntry object.</summary>
+      <value>The ILogEntry object that represents the item being logged.</value>
+    </member>
+    <member name="T:Leadtools.Logging.Logger">
+      <summary>Defines a class representing a logger.</summary>
+    </member>
+    <member name="M:Leadtools.Logging.Logger.#ctor">
+      <summary>Initializes a new instance of the Logger class.</summary>
+    </member>
+    <member name="M:Leadtools.Logging.Logger.#ctor(Leadtools.Logging.ILoggingChannel)">
+      <summary>Initializes a new instance of the Logger class.</summary>
+      <param name="channels">The logging channels to associated with this Logger instance.</param>
+    </member>
+    <member name="M:Leadtools.Logging.Logger.Debug(System.String,System.String)">
+      <summary>Logs the specified entry as a LogType.Debug.</summary>
+      <param name="source">The source of the message.</param>
+      <param name="message">The message.</param>
+    </member>
+    <member name="M:Leadtools.Logging.Logger.Debug(System.String,System.String,Dictionary&lt;string)">
+      <summary>Logs the specified entry as a LogType.Debug.</summary>
+      <param name="source">The source of the message.</param>
+      <param name="message">The message.</param>
+      <param name="custom">Custom information associated with the message.</param>
+    </member>
+    <member name="M:Leadtools.Logging.Logger.Error(System.String,System.String)">
+      <summary>Logs the specified entry as a LogType.Error.</summary>
+      <param name="source">The source of the message.</param>
+      <param name="message">The message.</param>
+    </member>
+    <member name="M:Leadtools.Logging.Logger.Error(System.String,System.String,Dictionary&lt;string)">
+      <summary>Logs the specified entry as a LogType.Error.</summary>
+      <param name="source">The source of the message.</param>
+      <param name="message">The message.</param>
+      <param name="custom">Custom information associated with the message.</param>
+    </member>
+    <member name="M:Leadtools.Logging.Logger.Exception(System.String,System.Exception)">
+      <summary>Logs the specified entry as an exception.</summary>
+      <param name="source">The source of the message.</param>
+      <param name="e">The exception to log.</param>
+    </member>
+    <member name="M:Leadtools.Logging.Logger.Exception(System.String,System.Exception,Dictionary&lt;string)">
+      <summary>Logs the specified entry as an exception.</summary>
+      <param name="source">The source of the message.</param>
+      <param name="e">The Exception to log.</param>
+      <param name="custom">Custom information associated with the exception.</param>
+    </member>
+    <member name="M:Leadtools.Logging.Logger.GetLogger(System.String)">
+      <summary>Gets the a logger with the specified name.</summary>
+      <param name="name">The name of the logger.</param>
+      <returns>A logger instance initialized from the configuration file.</returns>
+    </member>
+    <member name="M:Leadtools.Logging.Logger.Info(System.String,System.String)">
+      <summary>Logs the specified entry as a LogType.Information.</summary>
+      <param name="source">The source of the message.</param>
+      <param name="message">The message.</param>
+    </member>
+    <member name="M:Leadtools.Logging.Logger.Info(System.String,System.String,Dictionary&lt;string)">
+      <summary>Logs the specified entry as a LogType.Information.</summary>
+      <param name="source">The source of the message.</param>
+      <param name="message">The message.</param>
+      <param name="custom">Custom information associated with the message.</param>
+    </member>
+    <member name="M:Leadtools.Logging.Logger.Log(Leadtools.Logging.ILogEntry)">
+      <summary>Logs the specified entry.</summary>
+      <param name="entry">The entry to log.</param>
+    </member>
+    <member name="M:Leadtools.Logging.Logger.Warning(System.String,System.String)">
+      <summary>Logs the specified entry as a LogType.Warning.</summary>
+      <param name="source">The source of the message.</param>
+      <param name="message">The message.</param>
+    </member>
+    <member name="M:Leadtools.Logging.Logger.Warning(System.String,System.String,Dictionary&lt;string)">
+      <summary>Logs the specified entry as a LogType.Warning.</summary>
+      <param name="source">The source of the message.</param>
+      <param name="message">The message.</param>
+      <param name="custom">Custom information associated with the message.</param>
+    </member>
+    <member name="M:Leadtools.Logging.Logger.Dispose">
+      <summary>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</summary>
+    </member>
+    <member name="M:Leadtools.Logging.Logger.Dispose(System.Boolean)">
+      <summary>Releases all resources used by the Logger.</summary>
+      <param name="disposing">true to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
+    </member>
+    <member name="M:Leadtools.Logging.Logger.OnLogged(Leadtools.Logging.ILogEntry)">
+      <summary>Raises the Logged event.</summary>
+      <param name="entry">The ILogEntry object firing the event.</param>
+    </member>
+    <member name="M:Leadtools.Logging.Logger.OnLogging(Leadtools.Logging.ILogEntry)">
+      <summary>Raises the Logging event.</summary>
+      <param name="entry">The object firing the event.</param>
+    </member>
+    <member name="E:Leadtools.Logging.Logger.Logged">
+      <summary>Occurs after a message is logged.</summary>
+    </member>
+    <member name="E:Leadtools.Logging.Logger.Logging">
+      <summary>Occurs before a message is logged.</summary>
+    </member>
+    <member name="P:Leadtools.Logging.Logger.Enabled">
+      <summary>Gets a value indicating whether the logging is enabled.</summary>
+      <value>true if logging is enabled; otherwise, it is false.</value>
+    </member>
+    <member name="P:Leadtools.Logging.Logger.EnableThreading">
+      <summary>Gets a value indicating whether the logging will be handled in its own thread.</summary>
+      <value>true if logging is handled in its own thread; otherwise, it is false.</value>
+    </member>
+    <member name="P:Leadtools.Logging.Logger.Filter">
+      <summary>Gets or sets the filter that is used to determine the types of messages that are logged.</summary>
+      <value>The IEventLogFilter that determines the types of messages that are logged.</value>
+    </member>
+    <member name="P:Leadtools.Logging.Logger.Global">
+      <summary>Gets the global logger.</summary>
+      <value>The global logger.</value>
+    </member>
+    <member name="P:Leadtools.Logging.Logger.LoggingChannels">
+      <summary>Gets the logging channels.</summary>
+      <value>The logging channels registered with this logger instance.</value>
+    </member>
+    <member name="F:Leadtools.Logging.Logger.StackTraceKey">
+      <summary>Key used to store the stack trace information in LogEntry custom information.</summary>
+    </member>
+    <member name="T:Leadtools.Logging.SerializableDictionary`2">
+      <summary>Represents a serializable collection of keys and values.</summary>
+      <typeparam name="TKey">The type of the key.</typeparam>
+      <typeparam name="TValue">The type of the value.</typeparam>
+    </member>
+    <member name="M:Leadtools.Logging.SerializableDictionary`2.#ctor">
+      <summary>Initializes a new instance of the SerializableDictionary\&lt;TKey,TValue\&gt; class.</summary>
+    </member>
+    <member name="M:Leadtools.Logging.SerializableDictionary`2.#ctor(SerializationInfo,StreamingContext)">
+      <summary>Initializes a new instance of the SerializableDictionary\&lt;TKey,TValue\&gt; class.</summary>
+      <param name="info">A System.Runtime.Serialization.SerializationInfo object containing the information required to serialize the Dictionary.</param>
+      <param name="context">A System.Runtime.Serialization.StreamingContext structure containing the source and destination of the serialized stream associated with the Dictionary.</param>
+    </member>
+    <member name="M:Leadtools.Logging.SerializableDictionary`2.GetSchema">
+      <summary>This method is reserved and should not be used. When implementing the IXmlSerializable interface, you should return null (Nothing in VB) from this method. Instead, if specifying a custom schema is required, apply the System.Xml.Serialization.XmlSchemaProviderAttribute to the class.</summary>
+      <returns>An System.Xml.Schema.XmlSchema that describes the XML representation of the object that is produced by the System.Xml.Serialization.IXmlSerializable.WriteXml(System.Xml.XmlWriter) method and consumed by the System.Xml.Serialization.IXmlSerializable.ReadXml(System.Xml.XmlReader) method.</returns>
+    </member>
+    <member name="M:Leadtools.Logging.SerializableDictionary`2.ReadXml(XmlReader)">
+      <summary>Generates an object from its XML representation.</summary>
+      <param name="reader">The System.Xml.XmlReader stream from which the object is deserialized.</param>
+    </member>
+    <member name="M:Leadtools.Logging.SerializableDictionary`2.WriteXml(XmlWriter)">
+      <summary>Converts an object into its XML representation.</summary>
+      <param name="writer">The System.Xml.XmlWriter stream to which the object is serialized.</param>
+    </member>
+    <member name="T:Leadtools.Logging.LogType">
+      <summary>Specifies the severity level of the log.</summary>
+    </member>
+    <member name="F:Leadtools.Logging.LogType.Error">
+      <summary>Represents an error log level.</summary>
+      <value>0</value>
+    </member>
+    <member name="F:Leadtools.Logging.LogType.Warning">
+      <summary>Represents a warning log level.</summary>
+      <value>1</value>
+    </member>
+    <member name="F:Leadtools.Logging.LogType.Information">
+      <summary>Represents an information log level.</summary>
+      <value>2</value>
+    </member>
+    <member name="F:Leadtools.Logging.LogType.Debug">
+      <summary>Represents a debug log level.</summary>
+      <value>3</value>
+    </member>
+    <member name="F:Leadtools.Logging.LogType.Audit">
+      <summary>Represents an audit log level.</summary>
+      <value>4</value>
+    </member>
+    <member name="T:Leadtools.Logging.IEventLogFilter">
+      <summary>Defines an interface that is implemented to allow a user to write a class that handles configuring the event log.</summary>
+    </member>
+    <member name="M:Leadtools.Logging.IEventLogFilter.CanLog(Leadtools.Logging.ILogEntry)">
+      <summary>Determines if the ILogEntry can be logged.</summary>
+      <param name="logEntry">The ILogEntry that is to be logged.</param>
+      <returns>true if the ILogEntry can be logged; false otherwise</returns>
+    </member>
+    <member name="M:Leadtools.Logging.IEventLogFilter.Configure(Leadtools.Logging.LogFilterConfigurationElement)">
+      <summary>Configures the inherited class according to the settings specified in _configuration_.</summary>
+      <param name="configuration">Specifies the configure settings.</param>
+    </member>
+    <member name="T:Leadtools.Logging.ILogEntry">
+      <summary>Defines an interface that is implemented to allow a user to write a class that handles application specific logging requirements.</summary>
+    </member>
+    <member name="P:Leadtools.Logging.ILogEntry.CustomInformation">
+      <summary>Gets the custom information associated with the log entry.</summary>
+      <value>The custom information associated with the log entry.</value>
+    </member>
+    <member name="P:Leadtools.Logging.ILogEntry.LogType">
+      <summary>Gets or sets the type of the log entry.</summary>
+      <value>The type of the log entry.</value>
+    </member>
+    <member name="P:Leadtools.Logging.ILogEntry.MachineName">
+      <summary>Gets or sets the name of the machine that created the entry.</summary>
+      <value>The name of the machine that created the entry.</value>
+    </member>
+    <member name="P:Leadtools.Logging.ILogEntry.Message">
+      <summary>Gets or sets the message for the log entry.</summary>
+      <value>The message for the log entry.</value>
+    </member>
+    <member name="P:Leadtools.Logging.ILogEntry.Source">
+      <summary>Gets or sets the source of the log entry.</summary>
+      <value>The source of the log entry.</value>
+    </member>
+    <member name="P:Leadtools.Logging.ILogEntry.TimeStamp">
+      <summary>Gets or sets the time stamp of when this entry was created.</summary>
+      <value>The time stamp of when the entry was created.</value>
+    </member>
+    <member name="T:Leadtools.Logging.ILoggingChannel">
+      <summary>Defines a logging channel that participates in message logging.</summary>
+    </member>
+    <member name="M:Leadtools.Logging.ILoggingChannel.WriteLog(Leadtools.Logging.ILogEntry)">
+      <summary>Writes the log to the specific channel destination.</summary>
+      <param name="logEntry">The log entry.</param>
+    </member>
+    <member name="P:Leadtools.Logging.ILoggingChannel.Enabled">
+      <summary>Gets or sets a value indicating whether this ILoggingChannel is enabled.</summary>
+      <value>true if enabled; otherwise, false.</value>
+    </member>
+  </members>
+</doc>

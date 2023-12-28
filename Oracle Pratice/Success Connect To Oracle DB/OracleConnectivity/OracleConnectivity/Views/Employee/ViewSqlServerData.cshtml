@@ -1,0 +1,70 @@
+﻿@model IEnumerable<OracleConnectivity.Models.EMPLOYEES>
+
+@{
+    ViewBag.Title = "ViewSqlServerData";
+}
+
+<h2>ViewSqlServerData</h2>
+
+<p>
+
+    @Html.ActionLink("View Oracle Data", "EmpDetails") 
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ENAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JOB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MGR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HIREDATE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SAL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COMM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DEPTNO)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JOB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MGR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HIREDATE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SAL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COMM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DEPTNO)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.EMPNO }) |
+            @Html.ActionLink("Details", "Details", new { id=item.EMPNO }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.EMPNO })
+        </td>
+    </tr>
+}
+
+</table>

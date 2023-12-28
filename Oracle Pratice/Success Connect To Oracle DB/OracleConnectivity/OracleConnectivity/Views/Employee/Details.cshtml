@@ -1,0 +1,74 @@
+﻿@model OracleConnectivity.Models.EMP
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>EMP</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ENAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ENAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JOB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JOB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MGR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MGR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HIREDATE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HIREDATE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.COMM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COMM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DEPTNO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DEPTNO)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EMPNO }) |
+    @Html.ActionLink("Back to List", "EmpDetails")
+</p>

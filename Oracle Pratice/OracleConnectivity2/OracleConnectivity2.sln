@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34322.80
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OracleConnectivity2", "OracleConnectivity2\OracleConnectivity2.csproj", "{7CD15E20-E20B-4AA6-BB46-A2C8BD2242B2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7CD15E20-E20B-4AA6-BB46-A2C8BD2242B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CD15E20-E20B-4AA6-BB46-A2C8BD2242B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CD15E20-E20B-4AA6-BB46-A2C8BD2242B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CD15E20-E20B-4AA6-BB46-A2C8BD2242B2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9A557464-93F9-41D6-A203-E64EB0ADE141}
+	EndGlobalSection
+EndGlobal

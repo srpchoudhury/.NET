@@ -1,0 +1,28 @@
+CREATE or REPLACE PROCEDURE ora_aspnet_LogWebEvents wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+7
+2b4 1a1
+Jsu7YExKPhqRKU5O05gUMzaHj9YwgzL3LiBqynRAv7KdrIbFgaD2rkotqxThdFpFkFErGJ/2
+sA2DuywaOki/hhB5C/gtMjmhw0rOQ8G0dmSawTM8TdmxawCzIBK8TA+TYCopykRkrzj7uXkF
+ujWnw0Rd4eHX7WMI3vQeMiaw/hgh1MPmk6yrz9YEF0LTZ+/jDKQ5Yhapw4LEFLs4nX5EPMX0
+Lxqzb+YID9in0cMOHAny3eYnJWnRnTLeMCzFsKdtEMox0ppql/44ALFNWbzuj4jZ3pYq2Roz
+Xeajr7iGDvsgKgKLZzqkttknaS2I0BcEuUukQQC1AkGiduCOHbkRpZR9f0ktdpVGeJMABeIj
+lSECT4yKnkmsodyPRWDHh/p9f3mfX/dvxxyXioAUmJwkPWRL5w==
+
+/

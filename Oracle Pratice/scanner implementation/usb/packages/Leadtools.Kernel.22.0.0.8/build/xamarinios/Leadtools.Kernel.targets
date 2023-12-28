@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <NativeReference Include="Native References/Leadtools.framework">
+      <Kind>Framework</Kind>
+    </NativeReference>
+    <LeadtoolsFrameworkFiles_Leadtools_framework Include="$(MSBuildThisFileDirectory)/Leadtools.framework/*" />
+    <LeadtoolsFrameworkHeaderFiles_Leadtools_framework Include="$(MSBuildThisFileDirectory)/Leadtools.framework/Headers/*" />
+    <NativeReference Include="Native References/Leadtools.Drawing.framework">
+      <Kind>Framework</Kind>
+    </NativeReference>
+    <LeadtoolsFrameworkFiles_Leadtools_Drawing_framework Include="$(MSBuildThisFileDirectory)/Leadtools.Drawing.framework/*" />
+    <LeadtoolsFrameworkHeaderFiles_Leadtools_Drawing_framework Include="$(MSBuildThisFileDirectory)/Leadtools.Drawing.framework/Headers/*" />
+    <NativeReference Include="Native References/Leadtools.Svg.framework">
+      <Kind>Framework</Kind>
+    </NativeReference>
+    <LeadtoolsFrameworkFiles_Leadtools_Svg_framework Include="$(MSBuildThisFileDirectory)/Leadtools.Svg.framework/*" />
+    <LeadtoolsFrameworkHeaderFiles_Leadtools_Svg_framework Include="$(MSBuildThisFileDirectory)/Leadtools.Svg.framework/Headers/*" />
+    <NativeReference Include="Native References/Leadtools.Document.Core.framework">
+      <Kind>Framework</Kind>
+    </NativeReference>
+    <LeadtoolsFrameworkFiles_Leadtools_Document_Core_framework Include="$(MSBuildThisFileDirectory)/Leadtools.Document.Core.framework/*" />
+    <LeadtoolsFrameworkHeaderFiles_Leadtools_Document_Core_framework Include="$(MSBuildThisFileDirectory)/Leadtools.Document.Core.framework/Headers/*" />
+    <NativeReference Include="Native References/Leadtools.Codecs.framework">
+      <Kind>Framework</Kind>
+    </NativeReference>
+    <LeadtoolsFrameworkFiles_Leadtools_Codecs_framework Include="$(MSBuildThisFileDirectory)/Leadtools.Codecs.framework/*" />
+    <LeadtoolsFrameworkHeaderFiles_Leadtools_Codecs_framework Include="$(MSBuildThisFileDirectory)/Leadtools.Codecs.framework/Headers/*" />
+  </ItemGroup>
+  <Target Name="CreateNativeReferencesDirectory_Leadtools_framework" AfterTargets="BeforeBuild">
+    <MakeDir Directories="$(ProjectDir)/Native References/Leadtools.framework/Headers" />
+  </Target>
+  <Target Name="CopyLeadtoolsNativeFrameworks_Leadtools_framework" AfterTargets="CreateNativeReferencesDirectory_Leadtools_framework">
+    <Copy SourceFiles="@(LeadtoolsFrameworkFiles_Leadtools_framework)" DestinationFolder="$(ProjectDir)/Native References/Leadtools.framework" />
+    <Copy SourceFiles="@(LeadtoolsFrameworkHeaderFiles_Leadtools_framework)" DestinationFolder="$(ProjectDir)/Native References/Leadtools.framework/Headers" />
+  </Target>
+  <Target Name="CreateNativeReferencesDirectory_Leadtools_Drawing_framework" AfterTargets="BeforeBuild">
+    <MakeDir Directories="$(ProjectDir)/Native References/Leadtools.Drawing.framework/Headers" />
+  </Target>
+  <Target Name="CopyLeadtoolsNativeFrameworks_Leadtools_Drawing_framework" AfterTargets="CreateNativeReferencesDirectory_Leadtools_Drawing_framework">
+    <Copy SourceFiles="@(LeadtoolsFrameworkFiles_Leadtools_Drawing_framework)" DestinationFolder="$(ProjectDir)/Native References/Leadtools.Drawing.framework" />
+    <Copy SourceFiles="@(LeadtoolsFrameworkHeaderFiles_Leadtools_Drawing_framework)" DestinationFolder="$(ProjectDir)/Native References/Leadtools.Drawing.framework/Headers" />
+  </Target>
+  <Target Name="CreateNativeReferencesDirectory_Leadtools_Svg_framework" AfterTargets="BeforeBuild">
+    <MakeDir Directories="$(ProjectDir)/Native References/Leadtools.Svg.framework/Headers" />
+  </Target>
+  <Target Name="CopyLeadtoolsNativeFrameworks_Leadtools_Svg_framework" AfterTargets="CreateNativeReferencesDirectory_Leadtools_Svg_framework">
+    <Copy SourceFiles="@(LeadtoolsFrameworkFiles_Leadtools_Svg_framework)" DestinationFolder="$(ProjectDir)/Native References/Leadtools.Svg.framework" />
+    <Copy SourceFiles="@(LeadtoolsFrameworkHeaderFiles_Leadtools_Svg_framework)" DestinationFolder="$(ProjectDir)/Native References/Leadtools.Svg.framework/Headers" />
+  </Target>
+  <Target Name="CreateNativeReferencesDirectory_Leadtools_Document_Core_framework" AfterTargets="BeforeBuild">
+    <MakeDir Directories="$(ProjectDir)/Native References/Leadtools.Document.Core.framework/Headers" />
+  </Target>
+  <Target Name="CopyLeadtoolsNativeFrameworks_Leadtools_Document_Core_framework" AfterTargets="CreateNativeReferencesDirectory_Leadtools_Document_Core_framework">
+    <Copy SourceFiles="@(LeadtoolsFrameworkFiles_Leadtools_Document_Core_framework)" DestinationFolder="$(ProjectDir)/Native References/Leadtools.Document.Core.framework" />
+    <Copy SourceFiles="@(LeadtoolsFrameworkHeaderFiles_Leadtools_Document_Core_framework)" DestinationFolder="$(ProjectDir)/Native References/Leadtools.Document.Core.framework/Headers" />
+  </Target>
+  <Target Name="CreateNativeReferencesDirectory_Leadtools_Codecs_framework" AfterTargets="BeforeBuild">
+    <MakeDir Directories="$(ProjectDir)/Native References/Leadtools.Codecs.framework/Headers" />
+  </Target>
+  <Target Name="CopyLeadtoolsNativeFrameworks_Leadtools_Codecs_framework" AfterTargets="CreateNativeReferencesDirectory_Leadtools_Codecs_framework">
+    <Copy SourceFiles="@(LeadtoolsFrameworkFiles_Leadtools_Codecs_framework)" DestinationFolder="$(ProjectDir)/Native References/Leadtools.Codecs.framework" />
+    <Copy SourceFiles="@(LeadtoolsFrameworkHeaderFiles_Leadtools_Codecs_framework)" DestinationFolder="$(ProjectDir)/Native References/Leadtools.Codecs.framework/Headers" />
+  </Target>
+</Project>

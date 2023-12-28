@@ -1,0 +1,3 @@
+This file is needed so MSBuild will use net40 DLLs instead of .NETStandard DLLs for .NETFramework projects.
+
+The net40 DLLs are located in the build folder of this nuget package.
